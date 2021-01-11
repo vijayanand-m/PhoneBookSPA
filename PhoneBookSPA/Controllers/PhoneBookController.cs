@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PhoneBookSPA.Entities;
@@ -15,29 +18,28 @@ namespace PhoneBookSPA.Controllers
     [Route("[controller]")]
     public class PhoneBookController : ControllerBase
     {
-        private IPhoneBookService _phoneBookService;
-        private readonly ILogger<PhoneBookController> _logger;
+        private IPhoneBookServices _phoneBookServices;
 
-        public PhoneBookController(IPhoneBookService phoneBookService,
-                                    ILogger<PhoneBookController> logger)
+        public PhoneBookController(IPhoneBookServices phoneBookServices)
         {
-            _phoneBookService = phoneBookService;
-            _logger = logger;
+            _phoneBookServices = phoneBookServices;
 
         }
 
         [HttpGet]
-        public ActionResult<PhoneBook> Get()
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public IActionResult Get()
         {
             PhoneBook phoneBookEntity = new PhoneBook();
-            var response = _phoneBookService.GetPhoneBookDetails();
+            var response = _phoneBookServices.GetPhoneBookDetails();
 
-            if(response == null)
+            if(response.Result == null)
             {
-                return StatusCode(404);
+                return NotFound();
             }
             phoneBookEntity = response.Result;
-            return StatusCode(200,phoneBookEntity);
+            return Ok(phoneBookEntity);
         }
 
     }

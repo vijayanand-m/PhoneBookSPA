@@ -6,7 +6,11 @@ namespace PhoneBookSPA.Entities
     public class PhoneBook
     {
 
-        public IList<Contacts> Contacts { get; set; }
+        public List<Contacts> Contacts { get; set; }
+        public PhoneBook()
+        {
+            Contacts = new List<Contacts>();
+        }
         
     }
 

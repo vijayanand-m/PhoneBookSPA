@@ -5,7 +5,7 @@ using PhoneBookSPA.Entities;
 
 namespace PhoneBookSPA.Interface
 {
-    public interface IPhoneBookService
+    public interface IPhoneBookServices
     {
         Task<PhoneBook> GetPhoneBookDetails();
     }
