@@ -3,10 +3,6 @@ import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-balham.css";
 
-const style = {
-    'height': '100%',
-    'width': '100%'
-}
 export class PhoneBook extends Component {
     static displayName = PhoneBook.name;
    
