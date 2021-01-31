@@ -38,7 +38,7 @@ namespace PhoneBookSPA.UnitTest.Services
             var response = await _phoneBookServices.GetPhoneBookDetails();
 
             //Assert
-            Assert.IsNull(response);
+            Assert.IsNotNull(response);
         }
     }
 }

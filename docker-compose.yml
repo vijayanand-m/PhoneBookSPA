@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  phonebookspa:
+    image: ${DOCKER_REGISTRY-}phonebookspa
+    build:
+      context: .
+      dockerfile: PhoneBookSPA/Dockerfile
