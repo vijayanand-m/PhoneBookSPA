@@ -32,11 +32,8 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-
-- task: AzureRmWebAppDeployment@4
+- task: PublishBuildArtifacts@1
   inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Vijay Subscription 1(2be365c8-331b-4a05-92d6-7d4512ea95a6)'
-    appType: 'webApp'
-    WebAppName: 'azspa'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
