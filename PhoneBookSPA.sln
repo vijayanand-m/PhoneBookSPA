@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBookSPA.Services", "Ph
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBookSPA.UnitTest", "PhoneBookSPA.UnitTest\PhoneBookSPA.UnitTest.csproj", "{F9B555C5-C224-4065-8094-4B4CA9EE4C1C}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DB919D45-8CF2-42AE-BBC4-C1AC64C52DB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F9B555C5-C224-4065-8094-4B4CA9EE4C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9B555C5-C224-4065-8094-4B4CA9EE4C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9B555C5-C224-4065-8094-4B4CA9EE4C1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB919D45-8CF2-42AE-BBC4-C1AC64C52DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB919D45-8CF2-42AE-BBC4-C1AC64C52DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB919D45-8CF2-42AE-BBC4-C1AC64C52DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB919D45-8CF2-42AE-BBC4-C1AC64C52DB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
